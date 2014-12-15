@@ -37,7 +37,7 @@ npm install
 Example Usage: 
 
 ```
-./ownwords.js --blog taylorswift.tumblr.com --key cViDRYBtsIuFTv5VFzpvjERsFXcWqkov1dv0P12CDAdWzvBr04 --type video
+$ ./ownwords.js --blog taylorswift.tumblr.com --key cViDRYBtsIuFTv5VFzpvjERsFXcWqkov1dv0P12CDAdWzvBr04 --type video
 taylorswift.tumblr.com has 481 posts to process (24 pages)
 Found original video at http://taylorswift.tumblr.com/post/103959729000/it-feels-like-one-of-those-nights (published on 2014-11-30 06:49:56 GMT)
 Found original video at http://taylorswift.tumblr.com/post/103737170800/austin-playing-with-drones-in-the-house-is-not-a (published on 2014-11-27 18:18:08 GMT)
