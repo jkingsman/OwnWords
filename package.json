@@ -20,7 +20,6 @@
   "gitHead": "0e96e78c4d61069a995d18bc7c2b0dad2b0c4d9f",
   "dependencies": {
     "commander": "~2.5.0",
-    "tumblr.js": "0.0.4",
-    "express": "~4.10.6"
+    "tumblr.js": "0.0.4"
   }
 }
