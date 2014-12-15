@@ -31,7 +31,7 @@ npm install
 ## Usage
 
 ```bash
-./ownwords.js --blog [yourblog.tumblr.com] --key [Tumblr API consumer key] [--html]
+./ownwords.js <--blog yourblog.tumblr.com> <--key tumblr_api_consumer_key> [--html] [--type post_type]
 ```
 
 Example Output: 
@@ -51,6 +51,17 @@ Note that due to the nature of the many async API requests in this, date order w
 `--key` is the Tumblr API consumer key - these are unauthenticated queries to the API. Register to get an API key/token/etc [here](https://www.tumblr.com/oauth/apps).
 
 `--html` is an optional flag that will output html links instead of simple text (e.g. if you want to paste the results into an HTML sandbox so you can easily click the links instead of copying and pasting from your CLI window). Also adds `<br />` at the end of each line.
+
+`--type` is an optional flag that will restrict returned posts to a certain type. Supported types are:
+* text
+* photo
+* quote
+* link
+* chat
+* audio
+* video
+* answer
+* queue
 
 Near as I can tell, there's no rate limiting in v2 of the Tumblr API; there was heavy limiting in v1 but I've combed blogs with 10K+ posts and they've gone through fine.
 
