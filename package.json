@@ -1,0 +1,25 @@
+{
+  "name": "OwnWords",
+  "version": "0.0.1",
+  "description": "A command line utility to find Tumblr posts created by the blog owner (not reblogs).",
+  "main": "ownwords.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jkingsman/OwnWords.git"
+  },
+  "keywords": [
+    "tumblr",
+    "reblog"
+  ],
+  "author": "Jack Kingsman <jack.kingsman@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "0e96e78c4d61069a995d18bc7c2b0dad2b0c4d9f",
+  "dependencies": {
+    "commander": "~2.5.0",
+    "tumblr.js": "0.0.4"
+  }
+}
