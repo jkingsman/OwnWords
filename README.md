@@ -34,12 +34,15 @@ npm install
 ./ownwords.js <--blog yourblog.tumblr.com> <--key tumblr_api_consumer_key> [--html] [--type post_type]
 ```
 
-Example Output: 
+Example Usage: 
 
 ```
-Found original video at http://taylorswift.tumblr.com/post/103190985665/yeah-you-wanna-find-love-then-you-know-where-the (published on 2014-11-21 08:52:08 GMT)
-Found original photo at http://taylorswift.tumblr.com/post/103190931335/the-1975-at-the-palladium (published on 2014-11-21 08:50:23 GMT)
-Found original text at http://taylorswift.tumblr.com/post/102738967840/stuff-and-things-and-stuff (published on 2014-11-16 01:23:22 GMT)
+./ownwords.js --blog taylorswift.tumblr.com --key cViDRYBtsIuFTv5VFzpvjERsFXcWqkov1dv0P12CDAdWzvBr04 --type video
+taylorswift.tumblr.com has 481 posts to process (24 pages)
+Found original video at http://taylorswift.tumblr.com/post/103959729000/it-feels-like-one-of-those-nights (published on 2014-11-30 06:49:56 GMT)
+Found original video at http://taylorswift.tumblr.com/post/103737170800/austin-playing-with-drones-in-the-house-is-not-a (published on 2014-11-27 18:18:08 GMT)
+Found original video at http://taylorswift.tumblr.com/post/103644469300/this-was-what-happened-when-lena-and-i-found-out (published on 2014-11-26 16:35:33 GMT)
+[...]
 ```
 
 Note that due to the nature of the many async API requests in this, date order won't necessarily be present.
