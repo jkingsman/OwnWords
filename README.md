@@ -16,6 +16,12 @@ Clone this repository:
 git clone https://github.com/jkingsman/OwnWords.git
 ```
 
+Move into the directory:
+
+```bash
+cd OwnWords
+```
+
 Install the necessary dependencies:
 
 ```bash
