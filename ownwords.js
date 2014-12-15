@@ -12,17 +12,16 @@ var tumblr =    require('tumblr.js');
 program
     .option('--blog <url>',     'Blog url (no protocol) e.g. yourblog.tumblr.com)')
     .option('--key <key>',      'Your Tumblr API consumer key')
+    .option('--html',           'Output links as HTML links')
     .parse(process.argv);
     
 //sanity check command line input
 assert.ok(program.blog, "Please specify a blogname");
 assert.ok(program.key, "Consumer key is required");
 
-//build our client
+//build our API client
 var client = tumblr.createClient({ consumer_key: program.key });
 var pageCount; //number of results pages to go through
-var processedPosts = 0;
-var originalPosts = 0;
 
 //first, get our total count of posts to go through
 client.blogInfo(program.blog, function (err, data) {
@@ -43,10 +42,12 @@ client.blogInfo(program.blog, function (err, data) {
             data.posts.forEach(function (post) {
                 if(!post.hasOwnProperty('reblogged_from_id')){
                     //post doesn't have the reblogged fields; it's an original post
-                    console.log("Found original " + post.type + " at " + post.post_url + " (published on " + post.date + ")");
-                    originalPosts++;
+                    if (program.html)
+                        console.log("Found original " + post.type + " at <a href=\"" + post.post_url + "\">" + post.post_url + "</a> (published on " + post.date + ")");
+                    else{
+                        console.log("Found original " + post.type + " at " + post.post_url + " (published on " + post.date + ")");
+                    }
                 }
-                processedPosts++;
             })                
         });
     }
