@@ -31,7 +31,7 @@ npm install
 ## Usage
 
 ```bash
-./ownwords.js <--blog yourblog.tumblr.com> <--key tumblr_api_consumer_key> [--html] [--type post_type]
+./ownwords.js <--blog yourblog.tumblr.com> <--key tumblr_api_consumer_key> [--html] [--json] [--type post_type]
 ```
 
 Example Usage: 
@@ -65,6 +65,8 @@ Note that due to the nature of the many async API requests in this, date order w
 * video
 * answer
 * queue
+
+`--json` is an optional flag that will return a JSON array of post objects, with all the data Tumblr provides for each. Overrides `--html`
 
 Near as I can tell, there's no rate limiting in v2 of the Tumblr API; there was heavy limiting in v1 but I've combed blogs with 10K+ posts and they've gone through fine.
 
