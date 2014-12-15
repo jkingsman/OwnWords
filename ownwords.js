@@ -43,12 +43,12 @@ client.blogInfo(program.blog, function (err, data) {
                 if(!post.hasOwnProperty('reblogged_from_id')){
                     //post doesn't have the reblogged fields; it's an original post
                     if (program.html)
-                        console.log("Found original " + post.type + " at <a href=\"" + post.post_url + "\">" + post.post_url + "</a> (published on " + post.date + ")");
+                        console.log("Found original " + post.type + " at <a href=\"" + post.post_url + "\">" + post.post_url + "</a> (published on " + post.date + ")<br />");
                     else{
                         console.log("Found original " + post.type + " at " + post.post_url + " (published on " + post.date + ")");
                     }
                 }
-            })                
+            })
         });
     }
 });
