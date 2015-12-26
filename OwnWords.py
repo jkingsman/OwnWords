@@ -23,6 +23,8 @@ totalCount = blogData['posts']
 if not os.path.exists(outputLocation):
     os.makedirs(outputLocation)
 
+print 'Processing ' + blogName
+
 for offset in count(step=20):
     posts = client.posts(sys.argv[1], reblog_info='true', offset=offset)['posts']
     if not posts: # no more posts
